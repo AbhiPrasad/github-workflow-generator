@@ -1,0 +1,19 @@
+{
+  "name": "github-workflow-generator",
+  "version": "1.0.0",
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "fix": "biome check --apply .",
+    "lint": "biome check ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.5.3",
+    "typescript": "5.3.3"
+  },
+  "volta": {
+    "node": "20.11.0"
+  }
+}
