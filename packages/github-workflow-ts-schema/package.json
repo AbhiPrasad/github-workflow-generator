@@ -1,0 +1,19 @@
+{
+  "name": "github-workflow-ts-schema",
+  "description": "Github Workflow TypeScript Schema",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/generate.mjs",
+    "prepublishOnly": "yarn build"
+  },
+  "devDependencies": {
+    "json-schema-to-typescript": "^13.1.2",
+    "magicast": "^0.3.3",
+    "recast": "^0.23.4"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
