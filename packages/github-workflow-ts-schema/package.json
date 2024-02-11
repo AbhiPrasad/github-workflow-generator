@@ -1,9 +1,9 @@
 {
   "name": "github-workflow-ts-schema",
   "description": "Github Workflow TypeScript Schema",
-  "keywords": [],
-  "author": "",
+  "author": "Abhijeet Prasad",
   "license": "MIT",
+  "main": "src/index.ts",
   "scripts": {
     "generate": "node scripts/generate.mjs"
   },

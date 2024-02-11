@@ -1,4 +1,4 @@
-import type { Workflow } from './schema/types';
+import type { Workflow } from 'github-workflow-ts-schema';
 
 interface WorkflowGeneratorOptions {
   name?: string;

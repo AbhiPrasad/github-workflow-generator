@@ -1,0 +1,54 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ActionCheckoutStep > regular 1`] = `
+{
+  "uses": "actions/checkout",
+}
+`;
+
+exports[`ActionCheckoutStep > with fetchDepth 1`] = `
+{
+  "uses": "actions/checkout@v4",
+  "with": {
+    "fetch-depth": 2,
+  },
+}
+`;
+
+exports[`ActionCheckoutStep > with pinned sha 1`] = `
+{
+  "uses": "actions/checkout@dd126dd8c253650d181ad9538d8b4fa218fc31e8",
+}
+`;
+
+exports[`ActionCheckoutStep > with pinned version 1`] = `
+{
+  "uses": "actions/checkout@v4",
+}
+`;
+
+exports[`ActionCheckoutStep > with ref 1`] = `
+{
+  "uses": "actions/checkout@v4",
+  "with": {
+    "ref": "\${{ env.HEAD_COMMIT }}",
+  },
+}
+`;
+
+exports[`ActionCheckoutStep > with ref and fetchDepth 1`] = `
+{
+  "uses": "actions/checkout@v4",
+  "with": {
+    "fetch-depth": 2,
+    "ref": "\${{ env.HEAD_COMMIT }}",
+  },
+}
+`;
+
+exports[`ActionCheckoutStep > with ref and fetchDepth 2`] = `
+{
+  "name": "Checkout",
+  "uses": "actions/checkout@v4",
+}
+`;

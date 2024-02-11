@@ -5,7 +5,7 @@
 //   };
 // }
 
-import { Workflow } from './schema/types';
+import type { Workflow } from 'github-workflow-ts-schema';
 
 // interface JobWithNeeds<T> {
 //   needs: BaseJob<T>;
