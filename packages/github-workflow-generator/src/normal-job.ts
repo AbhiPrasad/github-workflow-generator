@@ -1,12 +1,13 @@
-import { NormalJob } from 'github-workflow-ts-schema';
+import { Concurrency, Matrix, NormalJob } from 'github-workflow-ts-schema';
 
 import { Step } from './step';
+import { ObjectToCamel } from './vendor/ts-case-convert';
 
 interface JobBuilderOptions {
   runsOn: NormalJob['runs-on'];
 }
 
-class JobBuilder {
+export class JobBuilder {
   /**
    * The type of machine to run the job on. The machine can be either a GitHub-hosted runner, or a self-hosted runner.
    */
@@ -78,6 +79,47 @@ class JobBuilder {
    * @minItems 1
    */
   #steps?: Step[];
+
+  /**
+   * A strategy creates a build matrix for your jobs. You can define different variations of an environment to run each job in.
+   */
+  #strategy?: ObjectToCamel<NormalJob['strategy']>;
+
+  /**
+   * Prevents a workflow run from failing when a job fails. Set to true to allow a workflow run to pass when this job fails.
+   */
+  #continueOnError?: NormalJob['continue-on-error'];
+
+  /**
+   * A container to run any steps in a job that don't already specify a container. If you have steps that use both script and
+   * container actions, the container actions will run as sibling containers on the same network with the same volume mounts.
+   *
+   * If you do not set a container, all steps will run directly on the host specified by runs-on unless a step refers to an
+   * action configured to run in a container.
+   */
+  container?: NormalJob['container'];
+
+  /**
+   * Additional containers to host services for a job in a workflow. These are useful for creating databases or cache services
+   * like redis. The runner on the virtual machine will automatically create a network and manage the life cycle of the service
+   * containers.
+   *
+   * When you use a service container for a job or your step uses container actions, you don't need to set port information to
+   * access the service. Docker automatically exposes all ports between containers on the same network.
+   *
+   * When both the job and the action run in a container, you can directly reference the container by its hostname. The hostname
+   * is automatically mapped to the service name.
+   *
+   * When a step does not use a container action, you must access the service using localhost and bind the ports.
+   */
+  #services?: NormalJob['services'];
+
+  /**
+   * Concurrency ensures that only a single job or workflow using the same concurrency group will run at a time. A concurrency group can be any string or expression. The expression can use any context except for the secrets context.
+   * You can also specify concurrency at the workflow level.
+   * When a concurrent job or workflow is queued, if another job or workflow using the same concurrency group in the repository is in progress, the queued job or workflow will be pending. Any previously pending job or workflow in the concurrency group will be canceled. To also cancel any currently running job or workflow in the same concurrency group, specify cancel-in-progress: true.
+   */
+  #concurrency?: ObjectToCamel<Concurrency>;
 
   constructor({ runsOn }: JobBuilderOptions) {
     this.#runsOn = runsOn;

@@ -1,8 +1,8 @@
 {
   "name": "github-workflow-generator",
   "description": "Automatically generate GitHub workflows with TypeScript",
-  "keywords": [],
-  "author": "",
+  "author": "Abhijeet Prasad",
+  "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
     "test": "vitest"

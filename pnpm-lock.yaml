@@ -15,6 +15,16 @@ importers:
         specifier: 5.3.3
         version: 5.3.3
 
+  examples/sentry-javascript:
+    dependencies:
+      github-workflow-generator:
+        specifier: workspace:*
+        version: link:../..
+    devDependencies:
+      vitest:
+        specifier: ^1.2.2
+        version: 1.2.2(@types/node@20.11.16)
+
   packages/github-workflow-generator:
     dependencies:
       github-workflow-ts-schema:

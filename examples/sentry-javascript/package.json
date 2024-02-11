@@ -1,0 +1,19 @@
+{
+  "name": "github-workflow-sentry-javascript",
+  "description": "Example of a GitHub workflow for Sentry JavaScript",
+  "author": "Abhijeet Prasad",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "scripts": {
+    "generate": "node scripts/generate.mjs"
+  },
+  "dependencies": {
+    "github-workflow-generator": "workspace:*"
+  },
+  "devDependencies": {
+    "vitest": "^1.2.2"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}

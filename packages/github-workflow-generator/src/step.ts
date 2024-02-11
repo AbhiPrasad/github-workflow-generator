@@ -14,6 +14,7 @@
 import type { Env, ExpressionSyntax, NormalJob, Shell, WorkingDirectory } from 'github-workflow-ts-schema';
 import type { Run } from './run';
 import { dropUndefinedKeys } from './utils';
+import { ObjectToDash, objectToDash } from './vendor/ts-case-convert';
 
 export type StepOptions = {
   /**
@@ -65,18 +66,6 @@ export type StepOptions = {
 
 export type CommunityStepOptions = Omit<StepOptions, 'with'>;
 
-export type SerializedStep = {
-  if?: boolean | number | string;
-  id?: string;
-  name?: string;
-  'working-directory'?: WorkingDirectory;
-  shell?: Shell;
-  with?: Env;
-  env?: string | Record<string, string | number | boolean | undefined>;
-  'continue-on-error'?: boolean | ExpressionSyntax;
-  'timeout-minutes'?: number | ExpressionSyntax;
-};
-
 abstract class BaseStep {
   #options: StepOptions;
 
@@ -84,18 +73,8 @@ abstract class BaseStep {
     this.#options = options;
   }
 
-  toJSON(): SerializedStep {
-    return dropUndefinedKeys({
-      if: this.#options.if,
-      id: this.#options.id,
-      name: this.#options.name,
-      'working-directory': this.#options.workingDirectory,
-      shell: this.#options.shell,
-      with: this.#options.with,
-      env: this.#options.env,
-      'continue-on-error': this.#options.continueOnError,
-      'timeout-minutes': this.#options.timeoutMinutes,
-    });
+  toJSON(): ObjectToDash<StepOptions> {
+    return dropUndefinedKeys(objectToDash(this.#options));
   }
 }
 
@@ -117,11 +96,11 @@ export abstract class UsesStep extends BaseStep {
     this.#uses = uses;
   }
 
-  toJSON(): SerializedStep & { uses: string } {
-    return dropUndefinedKeys({
+  toJSON(): ObjectToDash<StepOptions> & { uses: string } {
+    return {
       ...super.toJSON(),
       uses: this.#uses,
-    });
+    };
   }
 }
 
@@ -144,13 +123,11 @@ export abstract class RunStep extends BaseStep {
     this.#run = run;
   }
 
-  toJSON(): SerializedStep & { run: Run } {
-    return dropUndefinedKeys({
+  toJSON(): ObjectToDash<StepOptions> & { run: Run } {
+    return {
       ...super.toJSON(),
-
-      // TODO: run will be no longer a string
       run: this.#run,
-    });
+    };
   }
 }
 
