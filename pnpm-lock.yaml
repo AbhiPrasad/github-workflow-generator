@@ -15,21 +15,11 @@ importers:
         specifier: 5.3.3
         version: 5.3.3
 
-  packages/generator:
-    dependencies:
-      yaml:
-        specifier: 2.3.4
-        version: 2.3.4
-    devDependencies:
-      '@types/node':
-        specifier: ^20.11.16
-        version: 20.11.16
-      vitest:
-        specifier: ^1.2.2
-        version: 1.2.2(@types/node@20.11.16)
-
   packages/github-workflow-generator:
     dependencies:
+      github-workflow-ts-schema:
+        specifier: workspace:*
+        version: link:../github-workflow-ts-schema
       yaml:
         specifier: 2.3.4
         version: 2.3.4

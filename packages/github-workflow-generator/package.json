@@ -8,6 +8,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "github-workflow-ts-schema": "workspace:*",
     "yaml": "2.3.4"
   },
   "devDependencies": {
