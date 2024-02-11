@@ -5,8 +5,7 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "build": "node scripts/generate.mjs",
-    "prepublishOnly": "yarn build"
+    "generate": "node scripts/generate.mjs"
   },
   "devDependencies": {
     "json-schema-to-typescript": "^13.1.2",

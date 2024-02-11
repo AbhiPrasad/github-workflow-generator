@@ -210,40 +210,40 @@
  */
 
 export type Event =
-  | "branch_protection_rule"
-  | "check_run"
-  | "check_suite"
-  | "create"
-  | "delete"
-  | "deployment"
-  | "deployment_status"
-  | "discussion"
-  | "discussion_comment"
-  | "fork"
-  | "gollum"
-  | "issue_comment"
-  | "issues"
-  | "label"
-  | "member"
-  | "milestone"
-  | "page_build"
-  | "project"
-  | "project_card"
-  | "project_column"
-  | "public"
-  | "pull_request"
-  | "pull_request_review"
-  | "pull_request_review_comment"
-  | "pull_request_target"
-  | "push"
-  | "registry_package"
-  | "release"
-  | "status"
-  | "watch"
-  | "workflow_call"
-  | "workflow_dispatch"
-  | "workflow_run"
-  | "repository_dispatch";
+  | 'branch_protection_rule'
+  | 'check_run'
+  | 'check_suite'
+  | 'create'
+  | 'delete'
+  | 'deployment'
+  | 'deployment_status'
+  | 'discussion'
+  | 'discussion_comment'
+  | 'fork'
+  | 'gollum'
+  | 'issue_comment'
+  | 'issues'
+  | 'label'
+  | 'member'
+  | 'milestone'
+  | 'page_build'
+  | 'project'
+  | 'project_card'
+  | 'project_column'
+  | 'public'
+  | 'pull_request'
+  | 'pull_request_review'
+  | 'pull_request_review_comment'
+  | 'pull_request_target'
+  | 'push'
+  | 'registry_package'
+  | 'release'
+  | 'status'
+  | 'watch'
+  | 'workflow_call'
+  | 'workflow_dispatch'
+  | 'workflow_run'
+  | 'repository_dispatch';
 /**
  * Runs your workflow anytime the branch_protection_rule event occurs. More than one activity type triggers this event.
  */
@@ -259,7 +259,7 @@ export type EventObject = {
  *
  * @minItems 1
  */
-export type Types = ["created" | "edited" | "deleted", ...("created" | "edited" | "deleted")[]];
+export type Types = ['created' | 'edited' | 'deleted', ...('created' | 'edited' | 'deleted')[]];
 /**
  * Runs your workflow anytime the check_run event occurs. More than one activity type triggers this event. For information about the REST API, see https://developer.github.com/v3/checks/runs.
  */
@@ -276,8 +276,8 @@ export type EventObject1 = {
  * @minItems 1
  */
 export type Types1 = [
-  "created" | "rerequested" | "completed" | "requested_action",
-  ...("created" | "rerequested" | "completed" | "requested_action")[]
+  'created' | 'rerequested' | 'completed' | 'requested_action',
+  ...('created' | 'rerequested' | 'completed' | 'requested_action')[],
 ];
 /**
  * Runs your workflow anytime the check_suite event occurs. More than one activity type triggers this event. For information about the REST API, see https://developer.github.com/v3/checks/suites/.
@@ -294,7 +294,7 @@ export type EventObject2 = {
  *
  * @minItems 1
  */
-export type Types2 = ["completed" | "requested" | "rerequested", ...("completed" | "requested" | "rerequested")[]];
+export type Types2 = ['completed' | 'requested' | 'rerequested', ...('completed' | 'requested' | 'rerequested')[]];
 /**
  * Runs your workflow anytime the discussion event occurs. More than one activity type triggers this event. For information about the GraphQL API, see https://docs.github.com/en/graphql/guides/using-the-graphql-api-for-discussions
  */
@@ -312,35 +312,35 @@ export type EventObject3 = {
  */
 export type Types3 = [
   (
-    | "created"
-    | "edited"
-    | "deleted"
-    | "transferred"
-    | "pinned"
-    | "unpinned"
-    | "labeled"
-    | "unlabeled"
-    | "locked"
-    | "unlocked"
-    | "category_changed"
-    | "answered"
-    | "unanswered"
+    | 'created'
+    | 'edited'
+    | 'deleted'
+    | 'transferred'
+    | 'pinned'
+    | 'unpinned'
+    | 'labeled'
+    | 'unlabeled'
+    | 'locked'
+    | 'unlocked'
+    | 'category_changed'
+    | 'answered'
+    | 'unanswered'
   ),
   ...(
-    | "created"
-    | "edited"
-    | "deleted"
-    | "transferred"
-    | "pinned"
-    | "unpinned"
-    | "labeled"
-    | "unlabeled"
-    | "locked"
-    | "unlocked"
-    | "category_changed"
-    | "answered"
-    | "unanswered"
-  )[]
+    | 'created'
+    | 'edited'
+    | 'deleted'
+    | 'transferred'
+    | 'pinned'
+    | 'unpinned'
+    | 'labeled'
+    | 'unlabeled'
+    | 'locked'
+    | 'unlocked'
+    | 'category_changed'
+    | 'answered'
+    | 'unanswered'
+  )[],
 ];
 /**
  * Runs your workflow anytime the discussion_comment event occurs. More than one activity type triggers this event. For information about the GraphQL API, see https://docs.github.com/en/graphql/guides/using-the-graphql-api-for-discussions
@@ -357,7 +357,7 @@ export type EventObject4 = {
  *
  * @minItems 1
  */
-export type Types4 = ["created" | "edited" | "deleted", ...("created" | "edited" | "deleted")[]];
+export type Types4 = ['created' | 'edited' | 'deleted', ...('created' | 'edited' | 'deleted')[]];
 /**
  * Runs your workflow anytime the issue_comment event occurs. More than one activity type triggers this event. For information about the REST API, see https://developer.github.com/v3/issues/comments/.
  */
@@ -373,7 +373,7 @@ export type EventObject5 = {
  *
  * @minItems 1
  */
-export type Types5 = ["created" | "edited" | "deleted", ...("created" | "edited" | "deleted")[]];
+export type Types5 = ['created' | 'edited' | 'deleted', ...('created' | 'edited' | 'deleted')[]];
 /**
  * Runs your workflow anytime the issues event occurs. More than one activity type triggers this event. For information about the REST API, see https://developer.github.com/v3/issues.
  */
@@ -391,41 +391,41 @@ export type EventObject6 = {
  */
 export type Types6 = [
   (
-    | "opened"
-    | "edited"
-    | "deleted"
-    | "transferred"
-    | "pinned"
-    | "unpinned"
-    | "closed"
-    | "reopened"
-    | "assigned"
-    | "unassigned"
-    | "labeled"
-    | "unlabeled"
-    | "locked"
-    | "unlocked"
-    | "milestoned"
-    | "demilestoned"
+    | 'opened'
+    | 'edited'
+    | 'deleted'
+    | 'transferred'
+    | 'pinned'
+    | 'unpinned'
+    | 'closed'
+    | 'reopened'
+    | 'assigned'
+    | 'unassigned'
+    | 'labeled'
+    | 'unlabeled'
+    | 'locked'
+    | 'unlocked'
+    | 'milestoned'
+    | 'demilestoned'
   ),
   ...(
-    | "opened"
-    | "edited"
-    | "deleted"
-    | "transferred"
-    | "pinned"
-    | "unpinned"
-    | "closed"
-    | "reopened"
-    | "assigned"
-    | "unassigned"
-    | "labeled"
-    | "unlabeled"
-    | "locked"
-    | "unlocked"
-    | "milestoned"
-    | "demilestoned"
-  )[]
+    | 'opened'
+    | 'edited'
+    | 'deleted'
+    | 'transferred'
+    | 'pinned'
+    | 'unpinned'
+    | 'closed'
+    | 'reopened'
+    | 'assigned'
+    | 'unassigned'
+    | 'labeled'
+    | 'unlabeled'
+    | 'locked'
+    | 'unlocked'
+    | 'milestoned'
+    | 'demilestoned'
+  )[],
 ];
 /**
  * Runs your workflow anytime the label event occurs. More than one activity type triggers this event. For information about the REST API, see https://developer.github.com/v3/issues/labels/.
@@ -442,7 +442,7 @@ export type EventObject7 = {
  *
  * @minItems 1
  */
-export type Types7 = ["created" | "edited" | "deleted", ...("created" | "edited" | "deleted")[]];
+export type Types7 = ['created' | 'edited' | 'deleted', ...('created' | 'edited' | 'deleted')[]];
 /**
  * Runs your workflow anytime the member event occurs. More than one activity type triggers this event. For information about the REST API, see https://developer.github.com/v3/repos/collaborators/.
  */
@@ -458,7 +458,7 @@ export type EventObject8 = {
  *
  * @minItems 1
  */
-export type Types8 = ["added" | "edited" | "deleted", ...("added" | "edited" | "deleted")[]];
+export type Types8 = ['added' | 'edited' | 'deleted', ...('added' | 'edited' | 'deleted')[]];
 /**
  * Runs your workflow when a pull request is added to a merge queue, which adds the pull request to a merge group. For information about the merge queue, see https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request-with-a-merge-queue .
  */
@@ -474,7 +474,7 @@ export type EventObject9 = {
  *
  * @minItems 1
  */
-export type Types9 = ["checks_requested", ..."checks_requested"[]];
+export type Types9 = ['checks_requested', ...'checks_requested'[]];
 /**
  * Runs your workflow anytime the milestone event occurs. More than one activity type triggers this event. For information about the REST API, see https://developer.github.com/v3/issues/milestones/.
  */
@@ -491,8 +491,8 @@ export type EventObject10 = {
  * @minItems 1
  */
 export type Types10 = [
-  "created" | "closed" | "opened" | "edited" | "deleted",
-  ...("created" | "closed" | "opened" | "edited" | "deleted")[]
+  'created' | 'closed' | 'opened' | 'edited' | 'deleted',
+  ...('created' | 'closed' | 'opened' | 'edited' | 'deleted')[],
 ];
 /**
  * Runs your workflow anytime the project event occurs. More than one activity type triggers this event. For information about the REST API, see https://developer.github.com/v3/projects/.
@@ -510,8 +510,8 @@ export type EventObject11 = {
  * @minItems 1
  */
 export type Types11 = [
-  "created" | "updated" | "closed" | "reopened" | "edited" | "deleted",
-  ...("created" | "updated" | "closed" | "reopened" | "edited" | "deleted")[]
+  'created' | 'updated' | 'closed' | 'reopened' | 'edited' | 'deleted',
+  ...('created' | 'updated' | 'closed' | 'reopened' | 'edited' | 'deleted')[],
 ];
 /**
  * Runs your workflow anytime the project_card event occurs. More than one activity type triggers this event. For information about the REST API, see https://developer.github.com/v3/projects/cards.
@@ -529,8 +529,8 @@ export type EventObject12 = {
  * @minItems 1
  */
 export type Types12 = [
-  "created" | "moved" | "converted" | "edited" | "deleted",
-  ...("created" | "moved" | "converted" | "edited" | "deleted")[]
+  'created' | 'moved' | 'converted' | 'edited' | 'deleted',
+  ...('created' | 'moved' | 'converted' | 'edited' | 'deleted')[],
 ];
 /**
  * Runs your workflow anytime the project_column event occurs. More than one activity type triggers this event. For information about the REST API, see https://developer.github.com/v3/projects/columns.
@@ -547,7 +547,7 @@ export type EventObject13 = {
  *
  * @minItems 1
  */
-export type Types13 = ["created" | "updated" | "moved" | "deleted", ...("created" | "updated" | "moved" | "deleted")[]];
+export type Types13 = ['created' | 'updated' | 'moved' | 'deleted', ...('created' | 'updated' | 'moved' | 'deleted')[]];
 /**
  * Runs your workflow anytime the pull_request event occurs. More than one activity type triggers this event. For information about the REST API, see https://developer.github.com/v3/pulls.
  * Note: Workflows do not run on private base repositories when you open a pull request from a forked repository.
@@ -561,7 +561,7 @@ export type Ref = {
    * This interface was referenced by `undefined`'s JSON-Schema definition
    * via the `patternProperty` "^(branche|tag|path)s(-ignore)?$".
    */
-  [k: string]: unknown[];
+  [k: string]: unknown[] | undefined;
 } & ({
   [k: string]: unknown | undefined;
 } | null);
@@ -573,47 +573,47 @@ export type Ref = {
  */
 export type Types14 = [
   (
-    | "assigned"
-    | "unassigned"
-    | "labeled"
-    | "unlabeled"
-    | "opened"
-    | "edited"
-    | "closed"
-    | "reopened"
-    | "synchronize"
-    | "converted_to_draft"
-    | "ready_for_review"
-    | "locked"
-    | "unlocked"
-    | "milestoned"
-    | "demilestoned"
-    | "review_requested"
-    | "review_request_removed"
-    | "auto_merge_enabled"
-    | "auto_merge_disabled"
+    | 'assigned'
+    | 'unassigned'
+    | 'labeled'
+    | 'unlabeled'
+    | 'opened'
+    | 'edited'
+    | 'closed'
+    | 'reopened'
+    | 'synchronize'
+    | 'converted_to_draft'
+    | 'ready_for_review'
+    | 'locked'
+    | 'unlocked'
+    | 'milestoned'
+    | 'demilestoned'
+    | 'review_requested'
+    | 'review_request_removed'
+    | 'auto_merge_enabled'
+    | 'auto_merge_disabled'
   ),
   ...(
-    | "assigned"
-    | "unassigned"
-    | "labeled"
-    | "unlabeled"
-    | "opened"
-    | "edited"
-    | "closed"
-    | "reopened"
-    | "synchronize"
-    | "converted_to_draft"
-    | "ready_for_review"
-    | "locked"
-    | "unlocked"
-    | "milestoned"
-    | "demilestoned"
-    | "review_requested"
-    | "review_request_removed"
-    | "auto_merge_enabled"
-    | "auto_merge_disabled"
-  )[]
+    | 'assigned'
+    | 'unassigned'
+    | 'labeled'
+    | 'unlabeled'
+    | 'opened'
+    | 'edited'
+    | 'closed'
+    | 'reopened'
+    | 'synchronize'
+    | 'converted_to_draft'
+    | 'ready_for_review'
+    | 'locked'
+    | 'unlocked'
+    | 'milestoned'
+    | 'demilestoned'
+    | 'review_requested'
+    | 'review_request_removed'
+    | 'auto_merge_enabled'
+    | 'auto_merge_disabled'
+  )[],
 ];
 /**
  * Runs your workflow anytime the pull_request_review event occurs. More than one activity type triggers this event. For information about the REST API, see https://developer.github.com/v3/pulls/reviews.
@@ -634,7 +634,7 @@ export type EventObject14 = {
  *
  * @minItems 1
  */
-export type Types15 = ["submitted" | "edited" | "dismissed", ...("submitted" | "edited" | "dismissed")[]];
+export type Types15 = ['submitted' | 'edited' | 'dismissed', ...('submitted' | 'edited' | 'dismissed')[]];
 /**
  * Runs your workflow anytime a comment on a pull request's unified diff is modified, which triggers the pull_request_review_comment event. More than one activity type triggers this event. For information about the REST API, see https://developer.github.com/v3/pulls/comments.
  * Note: Workflows do not run on private base repositories when you open a pull request from a forked repository.
@@ -654,7 +654,7 @@ export type EventObject15 = {
  *
  * @minItems 1
  */
-export type Types16 = ["created" | "edited" | "deleted", ...("created" | "edited" | "deleted")[]];
+export type Types16 = ['created' | 'edited' | 'deleted', ...('created' | 'edited' | 'deleted')[]];
 /**
  * This event is similar to pull_request, except that it runs in the context of the base repository of the pull request, rather than in the merge commit. This means that you can more safely make your secrets available to the workflows triggered by the pull request, because only workflows defined in the commit on the base repository are run. For example, this event allows you to create workflows that label and comment on pull requests, based on the contents of the event payload.
  */
@@ -676,43 +676,43 @@ export type Ref1 = {
  */
 export type Types17 = [
   (
-    | "assigned"
-    | "unassigned"
-    | "labeled"
-    | "unlabeled"
-    | "opened"
-    | "edited"
-    | "closed"
-    | "reopened"
-    | "synchronize"
-    | "converted_to_draft"
-    | "ready_for_review"
-    | "locked"
-    | "unlocked"
-    | "review_requested"
-    | "review_request_removed"
-    | "auto_merge_enabled"
-    | "auto_merge_disabled"
+    | 'assigned'
+    | 'unassigned'
+    | 'labeled'
+    | 'unlabeled'
+    | 'opened'
+    | 'edited'
+    | 'closed'
+    | 'reopened'
+    | 'synchronize'
+    | 'converted_to_draft'
+    | 'ready_for_review'
+    | 'locked'
+    | 'unlocked'
+    | 'review_requested'
+    | 'review_request_removed'
+    | 'auto_merge_enabled'
+    | 'auto_merge_disabled'
   ),
   ...(
-    | "assigned"
-    | "unassigned"
-    | "labeled"
-    | "unlabeled"
-    | "opened"
-    | "edited"
-    | "closed"
-    | "reopened"
-    | "synchronize"
-    | "converted_to_draft"
-    | "ready_for_review"
-    | "locked"
-    | "unlocked"
-    | "review_requested"
-    | "review_request_removed"
-    | "auto_merge_enabled"
-    | "auto_merge_disabled"
-  )[]
+    | 'assigned'
+    | 'unassigned'
+    | 'labeled'
+    | 'unlabeled'
+    | 'opened'
+    | 'edited'
+    | 'closed'
+    | 'reopened'
+    | 'synchronize'
+    | 'converted_to_draft'
+    | 'ready_for_review'
+    | 'locked'
+    | 'unlocked'
+    | 'review_requested'
+    | 'review_request_removed'
+    | 'auto_merge_enabled'
+    | 'auto_merge_disabled'
+  )[],
 ];
 /**
  * Runs your workflow when someone pushes to a repository branch, which triggers the push event.
@@ -720,16 +720,16 @@ export type Types17 = [
  */
 export type Ref2 = {
   branches?: Branch;
-  "branches-ignore"?: Branch;
+  'branches-ignore'?: Branch;
   tags?: Branch;
-  "tags-ignore"?: Branch;
+  'tags-ignore'?: Branch;
   paths?: Path;
-  "paths-ignore"?: Path;
+  'paths-ignore'?: Path;
   /**
    * This interface was referenced by `undefined`'s JSON-Schema definition
    * via the `patternProperty` "^(branche|tag|path)s(-ignore)?$".
    */
-  [k: string]: string[];
+  [k: string]: string[] | undefined;
 } & ({
   [k: string]: unknown | undefined;
 } | null);
@@ -772,7 +772,7 @@ export type EventObject16 = {
  *
  * @minItems 1
  */
-export type Types18 = ["published" | "updated", ...("published" | "updated")[]];
+export type Types18 = ['published' | 'updated', ...('published' | 'updated')[]];
 /**
  * Runs your workflow anytime the release event occurs. More than one activity type triggers this event. For information about the REST API, see https://developer.github.com/v3/repos/releases/ in the GitHub Developer documentation.
  */
@@ -789,8 +789,8 @@ export type EventObject17 = {
  * @minItems 1
  */
 export type Types19 = [
-  "published" | "unpublished" | "created" | "edited" | "deleted" | "prereleased" | "released",
-  ...("published" | "unpublished" | "created" | "edited" | "deleted" | "prereleased" | "released")[]
+  'published' | 'unpublished' | 'created' | 'edited' | 'deleted' | 'prereleased' | 'released',
+  ...('published' | 'unpublished' | 'created' | 'edited' | 'deleted' | 'prereleased' | 'released')[],
 ];
 /**
  * This event occurs when a workflow run is requested or completed, and allows you to execute a workflow based on the finished result of another workflow. For example, if your pull_request workflow generates build artifacts, you can create a new workflow that uses workflow_run to analyze the results and add a comment to the original pull request.
@@ -811,12 +811,12 @@ export type EventObject18 = {
  *
  * @minItems 1
  */
-export type Types20 = ["requested" | "completed" | "in_progress", ...("requested" | "completed" | "in_progress")[]];
+export type Types20 = ['requested' | 'completed' | 'in_progress', ...('requested' | 'completed' | 'in_progress')[]];
 export type StringContainingExpressionSyntax = string;
 /**
  * You can override the default shell settings in the runner's operating system using the shell keyword. You can use built-in shell keywords, or you can define a custom set of shell options.
  */
-export type Shell = string | ("bash" | "pwsh" | "python" | "sh" | "cmd" | "powershell");
+export type Shell = string | ('bash' | 'pwsh' | 'python' | 'sh' | 'cmd' | 'powershell');
 /**
  * Using the working-directory keyword, you can specify the working directory of where to run the command.
  */
@@ -830,8 +830,8 @@ export type Name = string;
 /**
  * You can modify the default permissions granted to the GITHUB_TOKEN, adding or removing access as required, so that you only allow the minimum required access.
  */
-export type Permissions = ("read-all" | "write-all") | PermissionsEvent;
-export type PermissionsLevel = "read" | "write" | "none";
+export type Permissions = ('read-all' | 'write-all') | PermissionsEvent;
+export type PermissionsLevel = 'read' | 'write' | 'none';
 /**
  * To set custom environment variables, you need to specify the variables in the workflow file. You can define environment variables for a step, job, or entire workflow using the jobs.<job_id>.steps[*].env, jobs.<job_id>.env, and env keywords. For more information, see https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstepsenv
  */
@@ -987,7 +987,7 @@ export interface HttpsJsonSchemastoreOrgGithubWorkflowJson {
               /**
                * Required if input is defined for the on.workflow_call keyword. The value of this parameter is a string specifying the data type of the input. This must be one of: boolean, number, or string.
                */
-              type: "boolean" | "number" | "string";
+              type: 'boolean' | 'number' | 'string';
               /**
                * The default value is used when an input parameter isn't specified in a workflow file.
                */
@@ -1058,7 +1058,7 @@ export interface HttpsJsonSchemastoreOrgGithubWorkflowJson {
           },
           ...{
             cron?: string;
-          }[]
+          }[],
         ];
       };
   /**
@@ -1091,7 +1091,7 @@ export interface HttpsJsonSchemastoreOrgGithubWorkflowJson {
   /**
    * The name for workflow runs generated from the workflow. GitHub displays the workflow run name in the list of workflow runs on your repository's 'Actions' tab.
    */
-  "run-name"?: string;
+  'run-name'?: string;
   permissions?: Permissions;
 }
 /**
@@ -1100,7 +1100,7 @@ export interface HttpsJsonSchemastoreOrgGithubWorkflowJson {
 export interface Defaults {
   run?: {
     shell?: Shell;
-    "working-directory"?: WorkingDirectory;
+    'working-directory'?: WorkingDirectory;
   };
 }
 export interface Concurrency {
@@ -1111,7 +1111,7 @@ export interface Concurrency {
   /**
    * To cancel any currently running job or workflow in the same concurrency group, specify cancel-in-progress: true.
    */
-  "cancel-in-progress"?: boolean | ExpressionSyntax;
+  'cancel-in-progress'?: boolean | ExpressionSyntax;
 }
 /**
  * Each job must have an id to associate with the job. The key job_id is a string and its value is a map of the job's configuration data. You must replace <job_id> with a string that is unique to the jobs object. The <job_id> must start with a letter or _ and contain only alphanumeric characters, -, or _.
@@ -1126,7 +1126,7 @@ export interface NormalJob {
   /**
    * The type of machine to run the job on. The machine can be either a GitHub-hosted runner, or a self-hosted runner.
    */
-  "runs-on":
+  'runs-on':
     | string
     | ([string] & unknown[])
     | {
@@ -1207,7 +1207,7 @@ export interface NormalJob {
        * Each run keyword represents a new process and shell in the virtual environment. When you provide multi-line commands, each line runs in the same shell.
        */
       run?: string;
-      "working-directory"?: WorkingDirectory;
+      'working-directory'?: WorkingDirectory;
       shell?: Shell;
       with?: Env;
       /**
@@ -1221,11 +1221,11 @@ export interface NormalJob {
       /**
        * Prevents a job from failing when a step fails. Set to true to allow a job to pass when this step fails.
        */
-      "continue-on-error"?: boolean | ExpressionSyntax;
+      'continue-on-error'?: boolean | ExpressionSyntax;
       /**
        * The maximum number of minutes to run the step before killing the process.
        */
-      "timeout-minutes"?: number | ExpressionSyntax;
+      'timeout-minutes'?: number | ExpressionSyntax;
     },
     ...((
       | {
@@ -1266,7 +1266,7 @@ export interface NormalJob {
        * Each run keyword represents a new process and shell in the virtual environment. When you provide multi-line commands, each line runs in the same shell.
        */
       run?: string;
-      "working-directory"?: WorkingDirectory;
+      'working-directory'?: WorkingDirectory;
       shell?: Shell;
       with?: Env;
       /**
@@ -1280,17 +1280,17 @@ export interface NormalJob {
       /**
        * Prevents a job from failing when a step fails. Set to true to allow a job to pass when this step fails.
        */
-      "continue-on-error"?: boolean | ExpressionSyntax;
+      'continue-on-error'?: boolean | ExpressionSyntax;
       /**
        * The maximum number of minutes to run the step before killing the process.
        */
-      "timeout-minutes"?: number | ExpressionSyntax;
-    })[]
+      'timeout-minutes'?: number | ExpressionSyntax;
+    })[],
   ];
   /**
    * The maximum number of minutes to let a workflow run before GitHub automatically cancels it. Default: 360
    */
-  "timeout-minutes"?: number | ExpressionSyntax;
+  'timeout-minutes'?: number | ExpressionSyntax;
   /**
    * A strategy creates a build matrix for your jobs. You can define different variations of an environment to run each job in.
    */
@@ -1299,16 +1299,16 @@ export interface NormalJob {
     /**
      * When set to true, GitHub cancels all in-progress jobs if any matrix job fails. Default: true
      */
-    "fail-fast"?: boolean | string;
+    'fail-fast'?: boolean | string;
     /**
      * The maximum number of jobs that can run simultaneously when using a matrix job strategy. By default, GitHub will maximize the number of jobs run in parallel depending on the available runners on GitHub-hosted virtual machines.
      */
-    "max-parallel"?: number | string;
+    'max-parallel'?: number | string;
   };
   /**
    * Prevents a workflow run from failing when a job fails. Set to true to allow a workflow run to pass when this job fails.
    */
-  "continue-on-error"?: boolean | ExpressionSyntax;
+  'continue-on-error'?: boolean | ExpressionSyntax;
   /**
    * A container to run any steps in a job that don't already specify a container. If you have steps that use both script and container actions, the container actions will run as sibling containers on the same network with the same volume mounts.
    * If you do not set a container, all steps will run directly on the host specified by runs-on unless a step refers to an action configured to run in a container.
@@ -1336,13 +1336,13 @@ export interface PermissionsEvent {
   contents?: PermissionsLevel;
   deployments?: PermissionsLevel;
   discussions?: PermissionsLevel;
-  "id-token"?: PermissionsLevel;
+  'id-token'?: PermissionsLevel;
   issues?: PermissionsLevel;
   packages?: PermissionsLevel;
   pages?: PermissionsLevel;
-  "pull-requests"?: PermissionsLevel;
-  "repository-projects"?: PermissionsLevel;
-  "security-events"?: PermissionsLevel;
+  'pull-requests'?: PermissionsLevel;
+  'repository-projects'?: PermissionsLevel;
+  'security-events'?: PermissionsLevel;
   statuses?: PermissionsLevel;
 }
 /**
@@ -1364,7 +1364,7 @@ export interface Environment {
 export interface Defaults1 {
   run?: {
     shell?: Shell;
-    "working-directory"?: WorkingDirectory;
+    'working-directory'?: WorkingDirectory;
   };
 }
 export interface Container {
@@ -1437,7 +1437,7 @@ export interface ReusableWorkflowCallJob {
   /**
    * When a job is used to call a reusable workflow, you can use 'secrets' to provide a map of secrets that are passed to the called workflow. Any secrets that you pass must match the names defined in the called workflow.
    */
-  secrets?: Env1 | "inherit";
+  secrets?: Env1 | 'inherit';
   /**
    * A strategy creates a build matrix for your jobs. You can define different variations of an environment to run each job in.
    */
@@ -1446,11 +1446,11 @@ export interface ReusableWorkflowCallJob {
     /**
      * When set to true, GitHub cancels all in-progress jobs if any matrix job fails. Default: true
      */
-    "fail-fast"?: boolean | string;
+    'fail-fast'?: boolean | string;
     /**
      * The maximum number of jobs that can run simultaneously when using a matrix job strategy. By default, GitHub will maximize the number of jobs run in parallel depending on the available runners on GitHub-hosted virtual machines.
      */
-    "max-parallel"?: number | string;
+    'max-parallel'?: number | string;
   };
   /**
    * Concurrency ensures that only a single job or workflow using the same concurrency group will run at a time. A concurrency group can be any string or expression. The expression can use any context except for the secrets context.
